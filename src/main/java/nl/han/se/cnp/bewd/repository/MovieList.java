@@ -1,5 +1,6 @@
 package nl.han.se.cnp.bewd.repository;
 
+import nl.han.se.cnp.bewd.exceptions.GlobalExceptionHandler;
 import nl.han.se.cnp.bewd.exceptions.MovieNotFoundException;
 import org.springframework.stereotype.Repository;
 import nl.han.se.cnp.bewd.domain.Movie;
@@ -36,7 +37,7 @@ public class MovieList {
                 return movie;
             }
         }
-       throw new MovieNotFoundException();
+       throw new MovieNotFoundException("hallo");
     }
 
 }
